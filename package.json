@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.6.0",
+    "mongoose": "^7.0.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "tech-planet",
+  "description": "Tech Planet",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephcotterell/Tech-Planet.git"
+  },
+  "keywords": [
+    "Project",
+    "3"
+  ],
+  "author": "Sakariya, Joseph, Fadumo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephcotterell/Tech-Planet/issues"
+  },
+  "homepage": "https://github.com/josephcotterell/Tech-Planet#readme"
+}
