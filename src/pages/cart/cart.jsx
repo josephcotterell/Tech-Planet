@@ -1,4 +1,4 @@
 import react from "react"
-export const Shop = () =>{
+export const Cart = () =>{
     return <div>shop</div>
 }
