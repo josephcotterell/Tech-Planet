@@ -1,13 +1,14 @@
 import React from "react";
-import "../../pages/shop/shop.css"
-import {PRODUCTS} from "../../products"
-import {Product} from "./product"
+import { PRODUCTS } from "../../products";
+import { Product } from "./product";
+import "./shop.css";
+import "../shop-context"
 
 export const Shop = () => {
   return (
     <div className="shop">
       <div className="shopTitle">
-        <h1>TechWorld</h1>
+        <h1>TechPlanet</h1>
       </div>
 
       <div className="products">
