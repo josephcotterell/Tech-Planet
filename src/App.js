@@ -9,7 +9,7 @@ import Login from "../src/components/Login";
 import Logout from "../src/components/Logout";
 import { Register } from "./components/Register";
 import React, { useState } from "react";
-import Profile from "./components/Profile";
+
 function App() {
   const [currentForm, setCurrentForm] = useState("login");
   const toggleForm = (formName) => {
@@ -26,7 +26,6 @@ function App() {
             <Register onFormSwitch={toggleForm} />
           )}
           <Logout />
-          <Profile />
           <Routes>
             <Route path="/" element={<Shop />} />
             <Route path="/contact" element={<Contact />} />
