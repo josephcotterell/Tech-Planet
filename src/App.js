@@ -15,26 +15,27 @@ function App() {
   const toggleForm = (formName) => {
     setCurrentForm(formName);
   };
-  return;
-  <div className="App">
-    <ShopContextProvider>
-      <Router>
-        <Navbar />
-        {currentForm === "login" ? (
-          <Login onFormSwitch={toggleForm} />
-        ) : (
-          <Register onFormSwitch={toggleForm} />
-        )}
-        <Logout />
-        <Profile />
-        <Routes>
-          <Route path="/" element={<Shop />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </Router>
-    </ShopContextProvider>
-  </div>;
+  return (
+    <div className="App">
+      <ShopContextProvider>
+        <Router>
+          <Navbar />
+          {currentForm === "login" ? (
+            <Login onFormSwitch={toggleForm} />
+          ) : (
+            <Register onFormSwitch={toggleForm} />
+          )}
+          <Logout />
+          <Profile />
+          <Routes>
+            <Route path="/" element={<Shop />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </Router>
+      </ShopContextProvider>
+    </div>
+  );
 }
 
 export default App;
