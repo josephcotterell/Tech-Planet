@@ -1,0 +1,91 @@
+const { buildSchema } = require("graphql");
+
+module.exports = buildSchema(`
+
+type Order {
+    _id:ID!
+    user:User!
+    products:[Product!]
+    totalAmount:String!
+    status:Status!
+}
+
+enum Status {
+    Delivered
+    Pending
+    Shipped
+}
+
+
+type Product {
+    _id:ID!
+   name:String!
+   description:String!
+   price:Int!
+   category:String!
+   imageUrl:String!
+   inventory:String!
+    
+}
+
+
+input OrderInput {
+    userId:String!
+    products:[String!]
+    totalAmount:String!
+    status:String!
+
+}
+
+
+
+
+input ProductInput {
+    name:String!
+    description:String!
+    price:Int!
+    category:String!
+    imageUrl:String!
+    inventory:String!
+}
+
+
+
+
+
+
+type User {
+    _id:ID!
+    email:String!
+    name:String!
+    password: String
+    role:Role!
+}
+
+enum Role {
+    Customer
+    Admin
+}
+
+input UserInput {
+    email:String!
+    name:String!
+    password: String
+    
+}
+
+type RootQuery {
+    orders: [Order!]!
+    products: [Product!]!
+}
+
+type RootMutation {
+    createOrder(orderInput: OrderInput): Order
+    createProduct(productInput: ProductInput): Product
+}
+schema {
+    query: RootQuery
+    mutation: RootMutation 
+}
+
+`);
