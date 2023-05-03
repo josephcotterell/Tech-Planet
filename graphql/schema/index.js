@@ -17,16 +17,7 @@ enum Status {
 }
 
 
-type Product {
-    _id:ID!
-   name:String!
-   description:String!
-   price:Int!
-   category:String!
-   imageUrl:String!
-   inventory:String!
-    
-}
+
 
 
 input OrderInput {
@@ -38,6 +29,16 @@ input OrderInput {
 }
 
 
+type Product {
+    _id:ID!
+   name:String!
+   description:String!
+   price:Int!
+   category:String!
+   imageUrl:String!
+   inventory:String!
+    
+}
 
 
 input ProductInput {
