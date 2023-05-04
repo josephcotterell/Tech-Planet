@@ -25,7 +25,7 @@ function App() {
           ) : (
             <Register onFormSwitch={toggleForm} />
           )}
-          <Logout />
+          <Logout onFormSwitch={toggleForm} />
           <Routes>
             <Route path="/" element={<Shop />} />
             <Route path="/contact" element={<Contact />} />
