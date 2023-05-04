@@ -4,7 +4,7 @@ import {useAuth0} from '@auth0/auth0-react';
 export const Login = (props) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
   
 
   const handleSubmit = (e) => {
@@ -35,7 +35,17 @@ export const Login = (props) => {
           id="password"
           name="password"
         />
-        <li><button type="submit" onClick={() => loginWithRedirect()}>Log In</button> </li>
+
+{isAuthenticated ? (
+<li>
+  <button onClick={() => logout({  returnTo: window.location.origin } )}>
+      Log Out
+    </button>
+    </li>
+):(
+        <li><button type="submit" onClick={() => loginWithRedirect()}>Log In</button> 
+        </li>
+)}
       </form>
       <button
         className="link-btn"
