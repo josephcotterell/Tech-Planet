@@ -55,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/josephcotterell/Tech-Planet/issues"
   },
-  "homepage": "."
+  "homepage": ".",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
 }

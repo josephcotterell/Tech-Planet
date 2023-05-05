@@ -19,3 +19,15 @@
   margin-left: 20px;
   font-size: 25px;
 }
+
+.tech {
+  text-decoration: none;
+  color: white;
+  margin-left: 40px;
+  font-size: 40px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: left;
+  position: absolute;
+  left: 0px;
+}

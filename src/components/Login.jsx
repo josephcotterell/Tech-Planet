@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {useAuth0} from '@auth0/auth0-react';
+import '../components/Login.css';
 
 export const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -15,8 +16,9 @@ export const Login = (props) => {
   return (
      
     <div className="auth-form-container"> 
-
-      <h2>Login</h2>
+<div className="login">
+      <h2>Log in</h2>
+      </div>
       <form className="login-form" onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
         <input
@@ -43,9 +45,10 @@ export const Login = (props) => {
       Log Out
     </button>
     </li>
-):(
+):( <div className="log-button">
         <li><button type="submit" onClick={() => loginWithRedirect()}>Log In</button> 
         </li>
+        </div>
 )}
       </form>
       <button
